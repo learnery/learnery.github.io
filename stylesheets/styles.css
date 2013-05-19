@@ -1008,3 +1008,13 @@ footer {
     width: auto;
   }
 }
+
+.images {
+  text-align: center;
+}
+
+.images img {
+  margin-bottom: 10px;
+  border: 2px #4175B5 solid;
+  border-radius: 3px 3px 3px 3px;
+}

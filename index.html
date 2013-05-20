@@ -48,75 +48,9 @@ liking and deploy the app to heroku in a few simple steps.</p>
 <a href="http://serene-badlands-9643.herokuapp.com/"><img src="images/screenshot-4.png" alt="learnery with theme railsgirls"></a>
 </p>
 
-<h1>INSTALL</h1>
+       <p>Currently find all the documentation in 
+       the <a href="https://github.com/learnery/learnery">repositories README</a></p>
 
-<p>First clone this repository:</p>
-
-<pre><code>git clone https://github.com/learnery/learnery.git my-learnery-site
-cd my-learnery-site/
-bundle install
-</code></pre>
-
-<p>Now you have to decide if you want to build your theme from scatch:</p>
-
-<pre><code>rails generate theme
-</code></pre>
-
-<p>or if you want to for one of the themes from <a href="https://github.com/learnery">https://github.com/learnery</a> to start with:
-fork it into your own github account, say <a href="https://github.com/YOURGITHUB/theme-NAME.git">https://github.com/YOURGITHUB/theme-NAME.git</a>
-then:</p>
-
-<pre><code>git submodule add https://github.com/YOURGITHUB/theme-NAME.git theme
-</code></pre>
-
-<p>Now you have a theme-folder in your app, you can
-start your app now:</p>
-
-<pre><code>rake db:migrate
-rails s
-</code></pre>
-
-<p>and play around with it on http://localhost:3000/</p>
-
-<p>You can change the files in the themes-folder:</p>
-
-<pre><code>theme/
-├── README.md
-├── initializer.rb = set locale, site name and description  
-├── stylesheets
-│   ├── variables.css.less  = for bootstrap and you own stylesheet
-│   └── style.css.less      = your main stylesheet
-├── images
-│   ├── favicon.ico         = favicon
-│   ├── slider-1.jpg        = any other images you want to add
-│   └── slider-2.jpg          use them with image_tag( 'slider-1.jpg' )
-└── views
-    └── application
-        ├── _footer.html.erb      = short text 
-        └── _site_links.html.erb  = will be added to top navigation
-</code></pre>
-
-<p>When you are content with your changes commit your changes twice
-(once inside the theme folder, once in the main folder)
-but push only once (only your theme folder)</p>
-
-<pre><code>cd theme
-git commit -a -m 'my important changes'
-git push origin master
-cd ..
-git add theme
-# DO NOT PUSH!
-</code></pre>
-
-<p>Then you can deploy to heroku:</p>
-
-<pre><code>heroku create
-git push heroku master
-heroku run rake db:migrate
-heroku open
-</code></pre>
-
-<p>congratulations, your site is online!</p>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
